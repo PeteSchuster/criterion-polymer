@@ -1,0 +1,60 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/firebase-element/firebase-collection.html">
+
+<dom-module id="film-app">
+  <template>
+    <style>
+
+    </style>
+
+    <template is="dom-bind">
+      <firebase-collection
+        order-by-child="Spine"
+        location="https://amber-inferno-1836.firebaseio.com/films"
+        data="{{films}}"></firebase-collection>
+      <template is="dom-repeat" items="[[films]]" as="film">
+        <h2>[[film.Title]]</h2>
+        <dl>
+          <dt>Director:</dt>
+          <dd>[[film.Director]]</dd>
+          <dt>Link:</dt>
+          <dd><a href="[[film.Link]]">Link</a></dd>
+          <dt>Spine:</dt>
+          <dd>[[film.Spine]]</dd>
+          <dt>Country:</dt>
+          <dd>[[film.Country]]</dd>
+          <dt>Year:</dt>
+          <dd>[[film.Year]]</dd>
+        </dl>
+      </template>
+    </template>
+
+  </template>
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'film-app',
+
+      properties: {
+        foo: {
+          type: String,
+          value: 'film-app',
+          notify: true
+        }
+      }
+    });
+  })();
+  </script>
+</dom-module>
