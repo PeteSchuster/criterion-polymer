@@ -1,0 +1,67 @@
+{
+    "File": {
+        "ID": "965a4f4b-6266-e248-ad93-9de63a9cd0d5",
+        "Path": "/Users/peteschuster/src/criterion-polymer/Appfile",
+        "Source": "",
+        "Application": {
+            "Name": "criterion-polymer",
+            "Type": "node",
+            "Dependencies": null
+        },
+        "Project": {
+            "Name": "criterion-polymer",
+            "Infrastructure": "criterion-polymer"
+        },
+        "Infrastructure": [
+            {
+                "Name": "criterion-polymer",
+                "Type": "aws",
+                "Flavor": "simple",
+                "Foundations": [
+                    {
+                        "Name": "consul",
+                        "Config": null
+                    }
+                ]
+            }
+        ],
+        "Customization": null,
+        "Imports": null
+    },
+    "Vertices": [
+        {
+            "File": {
+                "ID": "965a4f4b-6266-e248-ad93-9de63a9cd0d5",
+                "Path": "/Users/peteschuster/src/criterion-polymer/Appfile",
+                "Source": "",
+                "Application": {
+                    "Name": "criterion-polymer",
+                    "Type": "node",
+                    "Dependencies": null
+                },
+                "Project": {
+                    "Name": "criterion-polymer",
+                    "Infrastructure": "criterion-polymer"
+                },
+                "Infrastructure": [
+                    {
+                        "Name": "criterion-polymer",
+                        "Type": "aws",
+                        "Flavor": "simple",
+                        "Foundations": [
+                            {
+                                "Name": "consul",
+                                "Config": null
+                            }
+                        ]
+                    }
+                ],
+                "Customization": null,
+                "Imports": null
+            },
+            "Dir": "",
+            "NameValue": "criterion-polymer"
+        }
+    ],
+    "Edges": []
+}
